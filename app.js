@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).send("<h1>Store API is live!</h1>");
+  res.status(200).send("<h1>PICO Y PLACA app is live!</h1>");
 });
 
 //Email
