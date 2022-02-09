@@ -9,8 +9,12 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).send("<h1>Store API is liv!</h1>");
+  res.status(200).send("<h1>Store API is live!</h1>");
 });
+
+//Email
+const sendEmail = require("./controllers/sendEmails");
+app.get("/send", sendEmail);
 
 //NOT FOUND and Error handler
 const errorHandlerMiddleware = require("./middleware/error-handler");
